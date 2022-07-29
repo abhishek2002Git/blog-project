@@ -1,9 +1,11 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { AppState } from "../contexts/Context";
 import "./product.css"
 
-const Product = () => {
+const Product = () => { 
+  const { setSidebar } = AppState();
   let { id } = useParams();
   // const [blogID, setBlogID] = useState();
   const [blogData, setBlogData] = useState();
@@ -21,7 +23,8 @@ const Product = () => {
   }, [])
 
   return (
-    <div>
+    <div onClick={()=>{setSidebar(false)}}> 
+    {/* closing sidebar on clicking */}
       <div dangerouslySetInnerHTML={{__html: blogData}} />
     </div>
   );
