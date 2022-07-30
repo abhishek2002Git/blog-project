@@ -23,19 +23,19 @@ const Sidebar2 = () => {
           <ul className="side-ul">
             <li className="side-li">DARK</li>
             <li onClick={showSubItemAbout} className="side-li">
-              ABOUT ME <i class="arrow down"></i>
+              ABOUT ME <i className="arrow down"></i>
             </li>
             <li
               style={{ display: subItemAbout ? "" : "none" }}
               className="side-li sub-item-about"
             >
-              <i class="arrow right"></i>PORTFOLIO
+              <i className="arrow right"></i>PORTFOLIO
             </li>
             <li
               style={{ display: subItemAbout ? "" : "none" }}
               className="side-li sub-item-about"
             >
-              <i class="arrow right"></i>CONTACT
+              <i className="arrow right"></i>CONTACT
             </li>
             <li className="side-li">BLOG</li>
             <li className="side-li">REACTJS</li>

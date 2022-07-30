@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./Components/Home";
 import Blog from "./Components/Blog";
-import Product from "./Components/Product";
+import Post from "./Components/Post";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import Sidebar from "./Components/Sidebar";
@@ -18,7 +18,7 @@ function App() {
       <Routes>
         <Route exact path="/blog" element={<Home />} />
         <Route exact path="/blogs" element={<Blog />} />
-        <Route exact path="/blog/:id" element={<Product />} />
+        <Route exact path="/blog/:id" element={<Post />} />
         {/* <Route exact path="/sidebar" element={<Sidebar2/>} /> */}
       </Routes>
       <Footer/>

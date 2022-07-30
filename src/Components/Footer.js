@@ -1,6 +1,7 @@
 import React from "react";
 import { AppState } from "../contexts/Context";
 import "./foot.css";
+import { FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
   const { setSidebar } = AppState();
@@ -28,6 +29,28 @@ const Footer = () => {
             <input className="subscribe-btn" type="button" value="Subscribe" />
           </div>
         </div>
+
+        <div className="socials">
+          <h2 className="social-text">Follow Me</h2>
+          <div className="social-boxes">
+            <div className="social-box">
+              <div className="social-icon">
+                <FaTwitter />
+              </div>
+            </div>
+            <div className="social-box center-icon">
+              <div className="social-icon">
+                <FaInstagram />
+              </div>
+            </div>
+            <div className="social-box">
+              <div className="social-icon">
+                <FaLinkedinIn />
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="footer-link-section">
           <div className="information">
             <span>Information</span>

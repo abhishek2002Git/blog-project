@@ -2,9 +2,9 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { AppState } from "../contexts/Context";
-import "./product.css"
+import "./post.css"
 
-const Product = () => { 
+const Post = () => { 
   const { setSidebar } = AppState();
   let { id } = useParams();
   // const [blogID, setBlogID] = useState();
@@ -30,4 +30,4 @@ const Product = () => {
   );
 };
 
-export default Product;
+export default Post;
