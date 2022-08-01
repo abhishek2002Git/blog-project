@@ -5,9 +5,9 @@ import Blog from "./Components/Blog";
 import Post from "./Components/Post";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
-import Sidebar from "./Components/Sidebar";
 import Sidebar2 from "./Components/Sidebar2";
 // import {AppContext} from "./contexts/Context"
+// import Scroll from "./Components/Scroll";
 import "./App.css";
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
         <Route exact path="/blog" element={<Home />} />
         <Route exact path="/blogs" element={<Blog />} />
         <Route exact path="/blog/:id" element={<Post />} />
-        {/* <Route exact path="/sidebar" element={<Sidebar2/>} /> */}
+        {/* <Route exact path="/scroll" element={<Scroll />} /> */}
       </Routes>
       <Footer/>
     </Router>

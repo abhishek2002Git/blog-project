@@ -2,10 +2,11 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { AppState } from "../contexts/Context";
+import Content from "./Content";
 import "./post.css"
 
 const Post = () => { 
-  const { setSidebar } = AppState();
+  const { setSidebar, scrollDir } = AppState();
   let { id } = useParams();
   // const [blogID, setBlogID] = useState();
   const [blogData, setBlogData] = useState();
@@ -23,9 +24,10 @@ const Post = () => {
   }, [])
 
   return (
-    <div onClick={()=>{setSidebar(false)}}> 
+    <div className="post-section" style={{marginTop: scrollDir == "scrolling down" ? "0px" : "75px"}} onClick={()=>{setSidebar(false)}}> 
     {/* closing sidebar on clicking */}
       <div dangerouslySetInnerHTML={{__html: blogData}} />
+      {/* <Content/> */}
     </div>
   );
 };

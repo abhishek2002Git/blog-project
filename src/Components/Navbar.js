@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./nav.css";
 import searchIcon from "./icons8-search.svg";
 import { AppState } from "../contexts/Context";
 
 const Navbar = () => {
-  const { sidebar, showSidebar,} = AppState();
+  const { showSidebar, scrollDir } = AppState();
+
   return (
-    <nav  className="navbar">
+    <nav
+      style={{
+        top: scrollDir == "scrolling down" ? "-75px" : "0px",
+        boxShadow: scrollDir == "scrolling down" ? "" : "0px 0px 10px #dbd7d7",
+      }}
+      className="navbar"
+    >
       <div className="container">
         <div className="logo">
           <img
