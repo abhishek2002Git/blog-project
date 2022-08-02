@@ -4,9 +4,10 @@ import "./foot.css";
 import { FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
-  const { setSidebar } = AppState();
+  const { setSidebar, sidebar } = AppState();
   return (
     <div
+      className={sidebar === true ? "side-bar-open" : ""}
       onClick={() => {
         setSidebar(false);
       }}

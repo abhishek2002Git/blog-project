@@ -57,7 +57,7 @@ const AppProvider = ({ children }) => {
         outsideClick,
         closeSidebar,
         setSidebar,
-        scrollDir 
+        scrollDir,
       }}
     >
       {children}

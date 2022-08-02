@@ -4,7 +4,7 @@ import searchIcon from "./icons8-search.svg";
 import { AppState } from "../contexts/Context";
 
 const Navbar = () => {
-  const { showSidebar, scrollDir } = AppState();
+  const { showSidebar, scrollDir, sidebar } = AppState();
 
   return (
     <nav
@@ -12,7 +12,7 @@ const Navbar = () => {
         top: scrollDir == "scrolling down" ? "-75px" : "0px",
         boxShadow: scrollDir == "scrolling down" ? "" : "0px 0px 10px #dbd7d7",
       }}
-      className="navbar"
+      className={sidebar === true ? "navbar side-bar-open" : "navbar"}
     >
       <div className="container">
         <div className="logo">
